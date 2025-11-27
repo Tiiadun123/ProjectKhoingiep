@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 217 91% 15%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 217 91% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 91% 15%;
+    
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 195 100% 95%;
+    --secondary-foreground: 217 91% 15%;
+    
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    
+    --accent: 188 85% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 50%;
+    
+    --radius: 1rem;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 50%), hsl(217 91% 40%));
+    --gradient-card: linear-gradient(135deg, hsl(217 91% 50% / 0.05), hsl(188 85% 50% / 0.05));
+    --gradient-pro: linear-gradient(135deg, hsl(45 93% 47%), hsl(38 92% 50%));
+    
+    --shadow-soft: 0 4px 16px hsl(217 91% 50% / 0.08);
+    --shadow-card: 0 2px 8px hsl(217 91% 50% / 0.06);
+    --shadow-lg: 0 8px 32px hsl(217 91% 50% / 0.12);
+  }
+
+  .dark {
+    --background: 217 91% 8%;
+    --foreground: 0 0% 98%;
+    
+    --card: 217 84% 12%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 217 84% 12%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 217 32% 18%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 217 32% 18%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 188 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    --success: 142 71% 50%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 93% 52%;
+    --warning-foreground: 0 0% 100%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 217 32% 18%;
+    --input: 217 32% 18%;
+    --ring: 217 91% 60%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 30%), hsl(217 91% 15%));
+    --gradient-card: linear-gradient(135deg, hsl(217 91% 60% / 0.1), hsl(188 85% 55% / 0.1));
+    --gradient-pro: linear-gradient(135deg, hsl(45 93% 52%), hsl(38 92% 55%));
+    
+    --shadow-soft: 0 4px 16px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 8px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-pro {
+    background: var(--gradient-pro);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-lg-custom {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* Smooth scroll for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent sticky header from covering anchored sections */
+/* Applies a top offset when navigating to an element with an id */
+[id] {
+  scroll-margin-top: 5rem;
+}

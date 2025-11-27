@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BizTalk - AI-Powered English Learning Platform
 
 ## 🚀 Quick Start
@@ -75,3 +76,6 @@ src/
 └── index.css          # Design system tokens
 ```
 
+=======
+# ProjectKhoingiep
+>>>>>>> 3399fed5738760c00dab30bffcd9912926b15a84
